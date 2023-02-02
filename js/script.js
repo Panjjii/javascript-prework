@@ -4,31 +4,31 @@
         clearMessages();
     
         const getMoveName = function(argMoveId){
-            if(argMoveId == 1) return "kamień";
-            if(argMoveId == 2) return "nożyce";
-            if(argMoveId == 3) return "papier";
+            if(argMoveId == 1) return 'kamień';
+            if(argMoveId == 2) return 'nożyce';
+            if(argMoveId == 3) return 'papier';
         }
   
         const displayResult = function(argComputerMove, argPlayerMove){
-          printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
+          printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   
             if(
-              (argComputerMove=="kamień" && argPlayerMove=="papier") ||
-              (argComputerMove=="papier" && argPlayerMove=="nożyce") || 
-              (argComputerMove=="nożyce" && argPlayerMove=="kamień")
+              (argComputerMove=='kamień' && argPlayerMove=='papier') ||
+              (argComputerMove=='papier' && argPlayerMove=='nożyce') || 
+              (argComputerMove=='nożyce' && argPlayerMove=='kamień')
             ) {
-                printMessage("Wygrywasz");
+                printMessage('Wygrywasz');
             }
             else if(argComputerMove == argPlayerMove) { 
-              printMessage("Mamy remis");
+              printMessage('Mamy remis');
            }
            else {
-              printMessage("Przegrywasz");
+              printMessage('Przegrywasz');
           }
         }
         
         const randomNumber = Math.floor(Math.random() * 3 + 1);
-        console.log("Komputer wylosował: " + randomNumber);
+        console.log('Komputer wylosował: ' + randomNumber);
     
         const computerMove = getMoveName(randomNumber);
     
